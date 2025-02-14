@@ -1,7 +1,13 @@
 import { View, Picker } from "react-native";
 import { styles } from "./styles";
 
-export function InputLst({ id, opciones, register, onChange, placeHolder = true }) {
+export function InputLst({
+  id,
+  opciones,
+  register,
+  onChange,
+  placeHolder = true,
+}) {
   return (
     <View style={styles.container}>
       <Picker
@@ -12,9 +18,15 @@ export function InputLst({ id, opciones, register, onChange, placeHolder = true 
           register(id).onChange({ target: { value: itemValue } });
         }}
       >
-        {placeHolder && <Picker.Item label="Seleccione una opción" value="" enabled={false} />}
+        {placeHolder && (
+          <Picker.Item label="Seleccione una opción" value="" enabled={false} />
+        )}
         {opciones.map((opcion, indx) => (
-          <Picker.Item key={indx} label={opcion.placeHolder} value={opcion.value} />
+          <Picker.Item
+            key={indx}
+            label={opcion.placeHolder}
+            value={opcion.value}
+          />
         ))}
       </Picker>
     </View>

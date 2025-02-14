@@ -31,16 +31,37 @@ export default function App() {
           <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} />
           <Stack.Screen name="IndicePP_PT" component={IndicePP_PT} />
           <Stack.Screen name="SubIndicePP" component={SubIndicePP} />
-          <Stack.Screen name="FormularioRegistroPP" component={FormularioRegistroPP_pagina} />
+          <Stack.Screen
+            name="FormularioRegistroPP"
+            component={FormularioRegistroPP_pagina}
+          />
           <Stack.Screen name="Pp_Registrados" component={Pp_Registrados} />
-          <Stack.Screen name="FormularioResultadoPP" component={FormularioResultadoPP} />
+          <Stack.Screen
+            name="FormularioResultadoPP"
+            component={FormularioResultadoPP}
+          />
           <Stack.Screen name="SubIndicePT" component={SubIndicePT} />
-          <Stack.Screen name="PP_Registrados_PrePT" component={PP_Registrados_PrePT_pagina} />
-          <Stack.Screen name="FormularioRegistroPT" component={FormularioRegistroPT_pagina} />
+          <Stack.Screen
+            name="PP_Registrados_PrePT"
+            component={PP_Registrados_PrePT_pagina}
+          />
+          <Stack.Screen
+            name="FormularioRegistroPT"
+            component={FormularioRegistroPT_pagina}
+          />
           <Stack.Screen name="Pt_Registrados" component={Pt_Registrados} />
-          <Stack.Screen name="FormularioResultadoPT" component={FormularioResultadoPT} />
-          <Stack.Screen name="MenuPrincipalAdmin" component={MenuPrincipalAdmin} />
-          <Stack.Screen name="RegistroUsuario" component={Registro_Usuario_Pagina} />
+          <Stack.Screen
+            name="FormularioResultadoPT"
+            component={FormularioResultadoPT}
+          />
+          <Stack.Screen
+            name="MenuPrincipalAdmin"
+            component={MenuPrincipalAdmin}
+          />
+          <Stack.Screen
+            name="RegistroUsuario"
+            component={Registro_Usuario_Pagina}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
