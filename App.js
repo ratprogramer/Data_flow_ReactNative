@@ -1,10 +1,9 @@
 // import { NavigationContainer } from "@react-navigation/native"; // <= Funciona de forma similar a la navegación de React Router DOM
 // import { createStackNavigator } from "@react-navigation/stack"; // <= Funciona de forma similar a la navegación de React Router DOM
 import { StatusBar } from "expo-status-bar";
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 
-// import { globalStyles } from "./src/styles/globalStyles";
-// import { InicioSesion } from "./src/Features/Modulo_usuarios/Vista_inicio_sesion/Paginas/InicioSesion";
+import { InicioSesion } from "./src/Features/Modulo_usuarios/Vista_inicio_sesion/Paginas/InicioSesion";
 // import { MenuPrincipalAdmin } from "./src/Features/Modulo_usuarios/Administrador/Menu_princial_admin/Pagina/MenuPrincipalAdmin/MenuPrincipalAdmin";
 // import { Registro_Usuario_Pagina } from "./src/Features/Modulo_usuarios/Administrador/Vista_registro_usuario/Pagina/Registro_Usuario_Pagina";
 // import { MenuPrincipal } from "./src/Features/Modulo_menus/Paginas/MenuPrincipal";
@@ -23,11 +22,16 @@ import { View, Text } from "react-native";
 
 export const App = () => {
   return (
-    <View>
-      <StatusBar style="auto" />
-      <View>
-        <Text>Open up App.js to start working on your app!</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
+      {/* <SafeAreaView style={styles.container}> */}
+      <StatusBar style="light" />
+      
+      
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
+        <InicioSesion />  
       </View>
+
+      {/* </SafeAreaView> */}
       {/* <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="InicioSesion" component={InicioSesion} />
@@ -70,3 +74,15 @@ export const App = () => {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: "100%",
+    top: 20,
+  },
+  text: {
+    fontSize: 25,
+    fontWeight: '500',
+  },
+});
