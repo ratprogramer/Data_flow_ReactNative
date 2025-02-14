@@ -15,8 +15,18 @@ export default function App() {
           Data Flow Analytics
       </Text>
       <Text style={{ color: '#ccc', fontSize: 30 }}>In Progress...</Text>
+      <Ejem />
     </View>
 
+  );
+}
+
+const Ejem = () => {
+  return (
+    <View>
+      <Text style={{ color: '#ccc', fontSize: 5 }}>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
 }
 
