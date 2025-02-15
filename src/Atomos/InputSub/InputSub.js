@@ -1,6 +1,6 @@
 import { Pressable, Text, StyleSheet, useWindowDimensions } from "react-native";
 
-export const InputSub = ({ text }) => {
+export const InputSub = ({ text, onPress }) => {
   const { width } = useWindowDimensions();
   const isDesktop = width > 768;
 
@@ -11,7 +11,7 @@ export const InputSub = ({ text }) => {
         isDesktop && styles.buttonDesktop,
         pressed && styles.buttonPressed, // Aplica este estilo cuando se presiona
       ]}
-      onPress={() => {}}
+      onPress={onPress}
     >
       <Text style={styles.text}>{text}</Text>
     </Pressable>

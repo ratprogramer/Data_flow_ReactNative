@@ -10,10 +10,10 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import { LoginForm } from "../Organismos/LoginForm";
 
-export const InicioSesion = () => {
-  const { width } = useWindowDimensions(); // <= Obtiene el ancho de la pantalla
+export const InicioSesion = ({ navigation }) => {
+  const { width } = useWindowDimensions();
 
-  const isDesktop = width > 768; // <= 780 es el ancho de una pantalla de escritorio
+  const isDesktop = width > 768;
 
   return (
     <View style={styles.container}>
@@ -27,7 +27,7 @@ export const InicioSesion = () => {
         <Text style={[styles.title, isDesktop && styles.titleDesktop]}>
           Bienvenido
         </Text>
-        <LoginForm />
+        <LoginForm navigation={navigation} />
         <Image
           style={[styles.logo, isDesktop && styles.logoDesktop]}
           source={require("../../../../imgs/LogoNormal.png")}

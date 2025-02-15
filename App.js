@@ -1,12 +1,12 @@
-// import { NavigationContainer } from "@react-navigation/native"; // <= Funciona de forma similar a la navegación de React Router DOM
-// import { createStackNavigator } from "@react-navigation/stack"; // <= Funciona de forma similar a la navegación de React Router DOM
+import { NavigationContainer } from "@react-navigation/native"; // <= Funciona de forma similar a la navegación de React Router DOM
+import { createStackNavigator } from "@react-navigation/stack"; // <= Funciona de forma similar a la navegación de React Router DOM
 import { StatusBar } from "expo-status-bar";
 import { View, SafeAreaView, StyleSheet } from "react-native";
 
 import { InicioSesion } from "./src/Features/Modulo_usuarios/Vista_inicio_sesion/Paginas/InicioSesion";
+import { MenuPrincipal } from "./src/Features/Modulo_menus/Paginas/MenuPrincipal";
 // import { MenuPrincipalAdmin } from "./src/Features/Modulo_usuarios/Administrador/Menu_princial_admin/Pagina/MenuPrincipalAdmin/MenuPrincipalAdmin";
 // import { Registro_Usuario_Pagina } from "./src/Features/Modulo_usuarios/Administrador/Vista_registro_usuario/Pagina/Registro_Usuario_Pagina";
-// import { MenuPrincipal } from "./src/Features/Modulo_menus/Paginas/MenuPrincipal";
 // import { IndicePP_PT } from "./src/Features/Modulo_pp_pt/Indice/Paginas/IndicePP_PT";
 // import { SubIndicePP } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/SubindicePP/SubIndicePP";
 // import { FormularioRegistroPP_pagina } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/FormularioRegistroPP/FormularioRegistroPP";
@@ -18,25 +18,28 @@ import { InicioSesion } from "./src/Features/Modulo_usuarios/Vista_inicio_sesion
 // import { Pt_Registrados } from "./src/Features/Modulo_pp_pt/Vista_pt/Paginas/Pt_Registrados/Pt_Registrados";
 // import { FormularioResultadoPT } from "./src/Features/Modulo_pp_pt/Vista_pt/Paginas/FormularioResultadoPT/FormularioResultadoPT";
 
-// const Stack = createStackNavigator();
+const Stack = createStackNavigator();
 
 export const App = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
-      <SafeAreaView style={{ flex: 1, width: "100%" }}>
-        <StatusBar style="light" />
-        
-        
-        <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
-          <InicioSesion />  
-        </View>
+    // <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
+    //   <SafeAreaView style={{ flex: 1, width: "100%" }}>
+    //     <StatusBar style="light" />
 
-      </SafeAreaView>
-      {/* <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="InicioSesion" component={InicioSesion} />
-          <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} />
-          <Stack.Screen name="IndicePP_PT" component={IndicePP_PT} />
+    //     <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
+    //       <InicioSesion />
+    //     </View>
+
+    //   </SafeAreaView>
+
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName="InicioSesion"
+      >
+        <Stack.Screen name="InicioSesion" component={InicioSesion} />
+        <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} />
+        {/* <Stack.Screen name="IndicePP_PT" component={IndicePP_PT} />
           <Stack.Screen name="SubIndicePP" component={SubIndicePP} />
           <Stack.Screen
             name="FormularioRegistroPP"
@@ -68,12 +71,12 @@ export const App = () => {
           <Stack.Screen
             name="RegistroUsuario"
             component={Registro_Usuario_Pagina}
-          />
-        </Stack.Navigator>
-      </NavigationContainer> */}
-    </View>
+          /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
+    // </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -83,6 +86,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 25,
-    fontWeight: '500',
+    fontWeight: "500",
   },
 });
