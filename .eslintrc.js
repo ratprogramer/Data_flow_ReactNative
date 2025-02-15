@@ -5,5 +5,4 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
   },
-  ignorePatterns: ["/dist/*"],
 };

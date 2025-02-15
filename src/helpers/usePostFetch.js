@@ -1,7 +1,7 @@
 import { Alert } from "react-native";
 import { VITE_DOMINIO } from '@env'
 
-export async function usePostFetch(endPoint, data) {
+export const usePostFetch = async (endPoint, data) => {
   try {
     const response = await fetch(VITE_DOMINIO + endPoint, {
       method: "POST",

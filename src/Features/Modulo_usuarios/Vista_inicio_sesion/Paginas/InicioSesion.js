@@ -1,40 +1,33 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, StyleSheet, useWindowDimensions, StatusBar } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { StatusBar } from "expo-status-bar";
-import {LoginForm} from "../Organismos/LoginForm"
-// import "./InicioSesion.css"
+
+import { LoginForm } from "../Organismos/LoginForm";
 
 export const InicioSesion = () => {
+  const { width } = useWindowDimensions(); // <= Obtiene el ancho de la pantalla
+
+  const isDesktop = width > 768; // <= 780 es el ancho de una pantalla de escritorio
+
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100%",
-      }}
-    >
+    <View style={styles.container}>
       <StatusBar style="light" />
       <LinearGradient
         colors={["#001d2e", "#0072b1"]}
         start={[0, 0]}
-        end={[1, 1]}
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-        }}
+        end={[0, 1]}
+        style={
+          [
+            styles.gradient, 
+            isDesktop && styles.gradientDesktop
+          ]
+        }
       >
-        <Text style={{ fontSize: 44, fontWeight: "bold", color: "#ffd" }}>
-          Inicio de Sesión
+        <Text style={[styles.title, isDesktop && styles.titleDesktop]}>
+          Bienvenido
         </Text>
         <LoginForm />
         <Image
-          style={{
-            width: 60,
-            height: 60,
-          }}
+          style={[styles.logo, isDesktop && styles.logoDesktop]}
           source={require("../../../../imgs/LogoNormal.png")}
         />
       </LinearGradient>
@@ -42,21 +35,38 @@ export const InicioSesion = () => {
   );
 };
 
-/*
-.inicioSesion-pagina{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    color: #fff;
-    align-items: center;
-    width: 100%;
-    gap: 100px;
-    background-color: antiquewhite;
-    justify-content: space-around;
-    background: linear-gradient(to bottom, #001d2e, #0072b1);
-}
-.titulo{
-    font-size: 44px;
-}
-*/
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+  },
+  gradient: {
+    flex: 1,
+    justifyContent: "space-around",
+    alignItems: "center",
+    width: "100%",
+    paddingHorizontal: 20,
+  },
+  gradientDesktop: {
+    paddingHorizontal: 80, // <= Tocó poner más espacio para pantallas grandes
+  },
+  title: {
+    fontSize: 56,
+    fontWeight: "bold",
+    color: "#fff",
+    textAlign: "center",
+  },
+  titleDesktop: {
+    fontSize: 64, // Aumentamos tamaño en PC
+  },
+  logo: {
+    width: 60,
+    height: 60,
+  },
+  logoDesktop: {
+    width: 100,
+    height: 100, // Logo más grande en PC
+  },
+});

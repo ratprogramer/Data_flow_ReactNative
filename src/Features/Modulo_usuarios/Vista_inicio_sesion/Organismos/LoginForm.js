@@ -1,83 +1,48 @@
-import { Alert } from 'react-native';
-import { InputSub } from '../../../../Atomos/InputSub/InputSub';
-// import { decodeToken } from '../../../../helpers/decodeToken';
-// import { usePostFetch } from '../../../../helpers/usePostFetch';
-import { useForm } from 'react-hook-form';
-import { useNavigation } from '@react-navigation/native';
-import { Label } from '../../../../Atomos/Label/Label';  //cambiar
-import { InputTxt } from '../../../../Atomos/InputTxt/InputTxt'; // cambiar
-import { View, TextInput, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, StyleSheet, useWindowDimensions } from "react-native";
+import { LabelRN } from "../../../../Atomos/Label/LabelRN";
+import { InputTxt } from "../../../../Atomos/InputTxt/InputTxt";
+import { InputSub } from "../../../../Atomos/InputSub/InputSub";
 
 export const LoginForm = () => {
-    // const { register, handleSubmit, formState: { errors } } = useForm();
-    // const navigation = useNavigation();
+  const { width } = useWindowDimensions();
+  const isDesktop = width > 768; // <= Esta es la medida de pantalla de PC
 
-    // const onSubmit = async (data) => {
-    //     const response = await usePostFetch('/login', data);
-    //     if (!response.success) {
-    //         Alert.alert('Error', 'Credenciales inválidas');
-    //     } else {
-    //         sessionStorage.setItem('token', response.result);
-    //         if (response.rol === 'analista') {
-    //             navigation.navigate('Menu');
-    //         } else if (response.rol === 'administrador') {
-    //             navigation.navigate('MenuAdmin');
-    //         } else {
-    //             Alert.alert('Error', 'Error iniciando sesión');
-    //         }
-    //     }
-    // };
-
-    // const onError = (errors) => {
-    //     for (const error in errors) {
-    //         Alert.alert('Error', 'Credenciales inválidas');
-    //     }
-    // };
-
-    /* 
-    <Label-C htmlFor={'dni'} text={'Usuario'} />
-                <InputTxt-C id={'dni'} placeholder={'Ingrese usuario'} register={register} type={'text'} validaciones={{ require: 'El usuario es obligatorio' }} />
-    */
-    return (
-        <View style={styles.container}>
-            <View style={styles.groupContainer}>
-                {/* <Label-C htmlFor={'dni'} text={'Usuario'} />
-                <InputTxt-C id={'dni'} placeholder={'Ingrese usuario'} register={register} type={'text'} validaciones={{ require: 'El usuario es obligatorio' }} /> */}
-
-                <Text>hello</Text>
-                <TextInput
-                    style={{ borderWidth: 1, padding: 10, marginTop: 5 }}
-                    placeholder="Ingrese usuario"
-                />
-            </View>
-
-            {/* <View style={styles.groupContainer}>
-                <Label-C htmlFor={'contraseña'} text={'Contraseña'} />
-                <InputTxt-C id={'contraseña'} placeholder={'Ingrese contraseña'} register={register} type={'password'} validaciones={{ require: 'La contraseña es obligatoria' }} />
-            </View> */}
-
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Ingresar</Text>
-            </TouchableOpacity>
-        </View>
-    );
-}
+  return (
+    <View style={[styles.container, isDesktop && styles.containerDesktop]}>
+      <View
+        style={[
+          styles.groupContainer,
+          isDesktop && styles.groupContainerDesktop,
+        ]}
+      >
+        <LabelRN text={"Usuario"} />
+        <InputTxt placeholder={"Ingrese usuario"} />
+        <LabelRN text={"Contraseña"} />
+        <InputTxt placeholder={"Ingrese contraseña"} />
+      </View>
+      <InputSub text={"Ingresar"} style={isDesktop && styles.buttonDesktop} />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        padding: 20,
-    },
-    groupContainer: {
-        marginBottom: 15,
-    },
-    button: {
-        backgroundColor: '#007bff',
-        padding: 10,
-        alignItems: 'center',
-        borderRadius: 5,
-    },
-    buttonText: {
-        color: '#fff',
-        fontSize: 16,
-    },
+  container: {
+    width: "100%",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  containerDesktop: {
+    paddingHorizontal: 80, // Más espacio en PC
+  },
+  groupContainer: {
+    marginBottom: 15,
+    width: "100%",
+  },
+  groupContainerDesktop: {
+    width: "60%", // Hacemos más angosto el formulario en PC
+  },
+  buttonDesktop: {
+    paddingVertical: 12,
+    paddingHorizontal: 50, // Botón más grande en PC
+  },
 });

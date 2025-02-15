@@ -1,4 +1,4 @@
-export function decodeToken(token) {
+export const decodeToken = (token) => {
   const [header, payload, last] = token.split(".");
   if (!payload) {
     throw new Error("Token no válido");

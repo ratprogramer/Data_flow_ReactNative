@@ -1,7 +1,7 @@
 // import { NavigationContainer } from "@react-navigation/native"; // <= Funciona de forma similar a la navegación de React Router DOM
 // import { createStackNavigator } from "@react-navigation/stack"; // <= Funciona de forma similar a la navegación de React Router DOM
 import { StatusBar } from "expo-status-bar";
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import { View, SafeAreaView, StyleSheet } from "react-native";
 
 import { InicioSesion } from "./src/Features/Modulo_usuarios/Vista_inicio_sesion/Paginas/InicioSesion";
 // import { MenuPrincipalAdmin } from "./src/Features/Modulo_usuarios/Administrador/Menu_princial_admin/Pagina/MenuPrincipalAdmin/MenuPrincipalAdmin";
