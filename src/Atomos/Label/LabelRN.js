@@ -11,7 +11,6 @@ export const LabelRN = ({ text }) => {
 const styles = StyleSheet.create({
   label: {
     fontSize: 24,
-    fontWeight: "bold",
     color: "#fff",
     width: "100%",
     marginTop: 10,

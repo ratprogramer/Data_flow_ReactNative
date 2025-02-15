@@ -13,7 +13,7 @@ export const InputSub = ({ text, onPress }) => {
       ]}
       onPress={onPress}
     >
-      <Text style={styles.text}>{text}</Text>
+      <Text style={[styles.text, isDesktop && styles.textDesktop]}>{text}</Text>
     </Pressable>
   );
 };
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 12,
     backgroundColor: "#1E3148",
-    width: "80%",
+    width: "100%",
     fontSize: 18,
     padding: 4,
     height: 40, // Aproximado a 2.5rem
@@ -36,11 +36,17 @@ const styles = StyleSheet.create({
     elevation: 3, // Solo para Android
   },
   buttonDesktop: {
-    width: "50%", // Ajuste para escritorio
+    width: "60%", // Ajuste para escritorio
+    height: 50,
   },
   text: {
     color: "#FFF",
     fontSize: 18,
+    fontWeight: "bold",
+  },
+  textDesktop: {
+    fontSize: 24,
+    fontWeight: "bold",
   },
   buttonPressed: {
     backgroundColor: "#0072b1", // Cambio de color al presionar

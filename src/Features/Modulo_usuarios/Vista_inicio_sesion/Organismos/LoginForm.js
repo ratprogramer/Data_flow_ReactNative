@@ -8,7 +8,7 @@ export const LoginForm = ({ navigation }) => {
   // Implementar la lógica
 
   const { width } = useWindowDimensions();
-  const isDesktop = width > 768; // <= Esta es la medida de pantalla de PC
+  const isDesktop = width > 768;
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
