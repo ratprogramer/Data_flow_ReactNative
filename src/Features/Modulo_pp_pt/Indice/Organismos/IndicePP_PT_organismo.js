@@ -16,3 +16,5 @@ export const IndicePP_PT_organismo = () => {
     </View>
   );
 }
+
+

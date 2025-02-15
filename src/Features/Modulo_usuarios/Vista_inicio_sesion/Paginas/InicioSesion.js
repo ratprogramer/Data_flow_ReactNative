@@ -7,7 +7,6 @@ import {
   StatusBar,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-
 import { LoginForm } from "../Organismos/LoginForm";
 
 export const InicioSesion = ({ navigation }) => {
