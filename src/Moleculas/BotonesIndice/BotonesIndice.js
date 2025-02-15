@@ -13,8 +13,8 @@ export const BotonesIndice = ({ botones }) => {
 
 const styles = StyleSheet.create({
   botonesIndiceContainer: {
-    gap: "3%", // Espaciado entre elementos
-    alignItems: "center", // Centra los elementos horizontalmente
-    flexDirection: "column", // Coloca los elementos en columna
+    gap: "3%",
+    alignItems: "center",
+    flexDirection: "column",
   },
 });

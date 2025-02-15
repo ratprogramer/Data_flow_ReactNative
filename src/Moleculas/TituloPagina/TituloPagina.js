@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 10,
     left: 10,
-    flexDirection: "row", // Asegura que el icono y el texto estén en la misma línea
+    flexDirection: "row",
     alignItems: "center",
   },
 });

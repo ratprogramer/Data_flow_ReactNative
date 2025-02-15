@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
   },
   btnDesktop: {
     top: 150,
-    width: "40%", // En escritorio tiene tamaño fijo para parecer tarjetas
+    width: "40%",
     height: "30%",
   },
   btnAtomoHover: {

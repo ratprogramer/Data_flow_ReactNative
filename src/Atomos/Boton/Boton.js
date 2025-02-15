@@ -20,7 +20,7 @@ export const Boton = ({ path, text }) => {
     <Pressable
       style={({ pressed }) => [
         styles.btnAtomo,
-        isDesktop ? styles.btnDesktop : styles.btnMobile, // Aplica estilos según el tamaño de la pantalla
+        isDesktop ? styles.btnDesktop : styles.btnMobile,
         pressed && styles.btnAtomoHover,
       ]}
       path={path}
