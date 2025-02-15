@@ -1,4 +1,11 @@
-import { View, Text, Image, StyleSheet, useWindowDimensions, StatusBar } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  useWindowDimensions,
+  StatusBar,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { LoginForm } from "../Organismos/LoginForm";
@@ -15,12 +22,7 @@ export const InicioSesion = () => {
         colors={["#001d2e", "#0072b1"]}
         start={[0, 0]}
         end={[0, 1]}
-        style={
-          [
-            styles.gradient, 
-            isDesktop && styles.gradientDesktop
-          ]
-        }
+        style={[styles.gradient, isDesktop && styles.gradientDesktop]}
       >
         <Text style={[styles.title, isDesktop && styles.titleDesktop]}>
           Bienvenido
