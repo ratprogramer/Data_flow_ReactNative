@@ -5,13 +5,13 @@ import { styles } from "./styles";
 
 export const IndicePP_PT_organismo = () => {
   const botones = [
-    { path: "SubMenuPP", text: "Producto en Proceso" },
-    { path: "", text: "Producto Terminado" },
+    { path: "SubIndicePP", text: "Producto en Proceso" },
+    { path: "SubMenuPT", text: "Producto Terminado" },
   ];
 
   return (
     <View style={styles.indiceContainer}>
-      <TituloPagina text={"Derivado Lácteo Fermentado"} />
+      <TituloPagina path={"MenuPrincipal"} text={"Derivado Lácteo Fermentado"} />
       <BotonesIndice botones={botones} />
     </View>
   );

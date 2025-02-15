@@ -3,7 +3,7 @@ import { useNavigation } from "@react-navigation/native";
 import BotonesIndice from "../../../../../Moleculas/BotonesIndice/BotonesIndice";
 import TituloPagina from "../../../../../Moleculas/TituloPagina/TituloPagina";
 
-export function SubIndicePP_organismo() {
+export const SubIndicePP_organismo = () => {
   const navigation = useNavigation();
 
   const botones = [

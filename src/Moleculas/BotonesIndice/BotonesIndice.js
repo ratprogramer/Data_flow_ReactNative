@@ -6,7 +6,7 @@ export const BotonesIndice = ({ botones }) => {
   return (
     <View style={styles.botonesIndiceContainer}>
       {botones.map((boton, index) => (
-        <Boton key={index} text={boton.text} />
+        <Boton key={index} path={boton.path} text={boton.text} />
       ))}
     </View>
   );
@@ -14,11 +14,12 @@ export const BotonesIndice = ({ botones }) => {
 
 const styles = StyleSheet.create({
   botonesIndiceContainer: {
-    gap: 5,
-    alignItems: "center",
-    flexDirection: "column",
-    top: 10,
-    width: "100%",
-    height: "100%",
+    // gap: 5,
+    // alignItems: "center",
+    // flexDirection: "column",
+    // top: 10,
+    // width: "100%",
+    // height: "100%",
+    // backgroundColor: "red"
   },
 });
