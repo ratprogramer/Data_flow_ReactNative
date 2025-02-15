@@ -1,20 +1,42 @@
-import { View, Text, StyleSheet } from "react-native";
-import { LinearGradient } from 'expo-linear-gradient';
+import { View, Text, Image } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
-// import {LoginForm} from "./../Organismos/LoginForm.jsx"
+import {LoginForm} from "../Organismos/LoginForm"
 // import "./InicioSesion.css"
 
 export const InicioSesion = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar style="light" />  
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+      }}
+    >
+      <StatusBar style="light" />
       <LinearGradient
-        colors={['#001d2e', '#0072b1']}
+        colors={["#001d2e", "#0072b1"]}
         start={[0, 0]}
         end={[1, 1]}
-        style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%' }}
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}
       >
-        <Text style={styles.text}>Inicio de Sesión</Text>
+        <Text style={{ fontSize: 44, fontWeight: "bold", color: "#ffd" }}>
+          Inicio de Sesión
+        </Text>
+        <LoginForm />
+        <Image
+          style={{
+            width: 60,
+            height: 60,
+          }}
+          source={require("../../../../imgs/LogoNormal.png")}
+        />
       </LinearGradient>
     </View>
   );
@@ -38,16 +60,3 @@ export const InicioSesion = () => {
 }
 */
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: '100%',
-    },
-    text: {
-      fontSize: 44,
-      fontWeight: 'bold',
-      color: '#ffd',
-    },
-  });

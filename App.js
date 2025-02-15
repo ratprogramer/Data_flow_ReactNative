@@ -23,15 +23,15 @@ import { InicioSesion } from "./src/Features/Modulo_usuarios/Vista_inicio_sesion
 export const App = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
-      {/* <SafeAreaView style={styles.container}> */}
-      <StatusBar style="light" />
-      
-      
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
-        <InicioSesion />  
-      </View>
+      <SafeAreaView style={{ flex: 1, width: "100%" }}>
+        <StatusBar style="light" />
+        
+        
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center", width: "100%" }}>
+          <InicioSesion />  
+        </View>
 
-      {/* </SafeAreaView> */}
+      </SafeAreaView>
       {/* <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="InicioSesion" component={InicioSesion} />
