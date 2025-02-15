@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     height: "99.8%",
     width: "100%",
+    backgroundColor: "#e6f8ff",
   },
   mainMenuContainer: {
     alignItems: "center",
