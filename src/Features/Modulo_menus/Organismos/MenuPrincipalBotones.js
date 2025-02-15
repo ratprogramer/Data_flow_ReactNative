@@ -5,7 +5,7 @@ export function MenuPrincipalBotones() {
   return (
     <View style={{ width: "100%", padding: 10 }}>
       <BotonContainer>
-        <Boton text={"Derivado Lácteo Fermentado"} />
+        <Boton path={"IndicePP_PT"} text={"Derivado Lácteo Fermentado"} />
         <Boton text={"Producto UHT"} />
         <Boton text={"Materia Prima"} />
         <Boton text={"Aguas y Enjuagues"} />
