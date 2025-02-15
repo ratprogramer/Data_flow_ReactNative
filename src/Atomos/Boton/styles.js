@@ -33,12 +33,11 @@ export const styles = StyleSheet.create({
   },
   btnMobile: {
     width: "100%", // En móviles ocupa casi todo el ancho
-    height: 50,
   },
   btnDesktop: {
     top: 150,
     width: "40%",
-    height: "30%",
+    height: "40%",
   },
   btnAtomoHover: {
     backgroundColor: "#005072",

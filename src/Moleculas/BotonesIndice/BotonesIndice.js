@@ -2,6 +2,7 @@ import { Boton } from "../../Atomos/Boton/Boton";
 import { View, StyleSheet } from "react-native";
 
 export const BotonesIndice = ({ botones }) => {
+
   return (
     <View style={styles.botonesIndiceContainer}>
       {botones.map((boton, index) => (
@@ -13,8 +14,11 @@ export const BotonesIndice = ({ botones }) => {
 
 const styles = StyleSheet.create({
   botonesIndiceContainer: {
-    gap: "3%",
+    gap: 5,
     alignItems: "center",
     flexDirection: "column",
+    top: 10,
+    width: "100%",
+    height: "100%",
   },
 });
