@@ -33,8 +33,7 @@ export const styles = StyleSheet.create({
   },
   btnMobile: {
     width: "100%", // En móviles ocupa casi todo el ancho
-    color: "red"
-
+    height: 50,
   },
   btnDesktop: {
     top: 150,
@@ -45,7 +44,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#005072",
   },
   text: {
-    color: "#FFFFFF",
+    color: "#fff",
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",

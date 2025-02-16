@@ -5,8 +5,9 @@ import { styles } from "./styles";
 
 export const IndicePP_PT_organismo = () => {
   const botones = [
-    { path: "SubIndicePP", text: "Producto en Proceso" },
-    { path: "SubMenuPT", text: "Producto Terminado" },
+    { path: "", text: "Producto en Proceso" },
+    { path: "", text: "Producto Terminado" },
+    { path: "", text: "Productos en Proceso" },
   ];
 
   return (

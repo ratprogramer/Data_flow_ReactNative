@@ -2,16 +2,14 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
 
-export function CardPP_molecula(
-  {
+export const CardPP_molecula = ({
     // nombreMuestra,
     // lote,
     // fechaAnalisis,
     // responsableAnalisis,
     // id,
     // navRoute,
-  }
-) {
+  }) => {
   const navigation = useNavigation();
 
   const handleClick = () => {
