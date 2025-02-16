@@ -11,7 +11,10 @@ export const IndicePP_PT_organismo = () => {
 
   return (
     <View style={styles.indiceContainer}>
-      <TituloPagina path={"MenuPrincipal"} text={"Derivado Lácteo Fermentado"} />
+      <TituloPagina
+        path={"MenuPrincipal"}
+        text={"Derivado Lácteo Fermentado"}
+      />
       <BotonesIndice botones={botones} />
     </View>
   );

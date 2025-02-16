@@ -9,4 +9,4 @@ export const IndicePP_PT = () => {
       {/* <CardPP_molecula /> */}
     </View>
   );
-}
+};

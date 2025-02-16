@@ -5,7 +5,6 @@ import { View, StyleSheet } from "react-native";
 export const BotonesIndice = ({ botones }) => {
   return (
     <View style={styles.botonesIndiceContainer}>
-
       <BotonContainer>
         {botones.map((boton, index) => (
           <Boton key={index} path={boton.path} text={boton.text} />

@@ -1,11 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./styles";
-import {
-  Pressable,
-  Text,
-  View,
-  useWindowDimensions,
-} from "react-native";
+import { Pressable, Text, View, useWindowDimensions } from "react-native";
 
 export const Boton = ({ path, text }) => {
   const navigation = useNavigation();
