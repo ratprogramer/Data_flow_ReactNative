@@ -12,9 +12,9 @@ export const TituloPagina = ({ path, text }) => {
   return (
     <View style={styles.container}>
       <Pressable onPress={handleClick}>
-        <Ionicons name="arrow-back" size={30} color="#000" />
+        <Ionicons name="arrow-back" size={30} color="#00a8e1" />
       </Pressable>
-      <Text>{text}</Text>
+      <Text style={styles.text}>{text}</Text>
     </View>
   );
 };
@@ -26,5 +26,11 @@ const styles = StyleSheet.create({
     left: 10,
     flexDirection: "row",
     alignItems: "center",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginLeft: 10,
+    color: "#00a8e1",
   },
 });

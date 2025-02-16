@@ -7,7 +7,6 @@ export const IndicePP_PT_organismo = () => {
   const botones = [
     { path: "", text: "Producto en Proceso" },
     { path: "", text: "Producto Terminado" },
-    { path: "", text: "Productos en Proceso" },
   ];
 
   return (

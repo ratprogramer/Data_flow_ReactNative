@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     gap: 10,
   },
   containerDesktop: {
-    bottom: 250,
+    bottom: 200,
     left: 180,
     flexDirection: "row",
     flexWrap: "wrap",
