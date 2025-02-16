@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flexDirection: "column", // En móviles, los botones están en columna
-    alignItems: "center",
+    // alignItems: "center",
     gap: 10,
   },
   containerDesktop: {
@@ -32,12 +32,14 @@ export const styles = StyleSheet.create({
     elevation: 3,
   },
   btnMobile: {
-    width: "90%",
+    width: "100%", // En móviles ocupa casi todo el ancho
+    color: "red"
+
   },
   btnDesktop: {
     top: 150,
     width: "40%",
-    height: "40%",
+    height: "30%",
   },
   btnAtomoHover: {
     backgroundColor: "#005072",
@@ -49,6 +51,6 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   textDesktop: {
-    fontSize: 18,
+    fontSize: 30,
   },
 });

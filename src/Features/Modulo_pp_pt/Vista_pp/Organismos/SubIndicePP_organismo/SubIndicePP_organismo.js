@@ -1,7 +1,7 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { BotonesIndice } from "../../../../../Moleculas/BotonesIndice/BotonesIndice";
-import TituloPagina from "../../../../../Moleculas/TituloPagina/TituloPagina";
+import { TituloPagina } from "../../../../../Moleculas/TituloPagina/TituloPagina";
 
 export const SubIndicePP_organismo = () => {
   const navigation = useNavigation();
@@ -10,11 +10,8 @@ export const SubIndicePP_organismo = () => {
 
   return (
     <View style={styles.container}>
-      <TituloPagina
-        text="Producto en proceso"
-        onPress={() => navigation.navigate("MenuPrincipal")}
-      />
-      <BotonesIndice botones={botones} navigation={navigation} />
+      <Text>SubIndicePP_organismo</Text>
+      {/* <BotonesIndice botones={botones} navigation={navigation} /> */}
     </View>
   );
 };

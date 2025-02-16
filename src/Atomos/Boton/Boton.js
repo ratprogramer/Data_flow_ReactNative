@@ -23,6 +23,7 @@ export const Boton = ({ path, text }) => {
         isDesktop ? styles.btnDesktop : styles.btnMobile,
         pressed && styles.btnAtomoHover,
       ]}
+      path={path}
       onPress={handleNavigate}
     >
       <Text style={[styles.text, isDesktop && styles.textDesktop]}>{text}</Text>

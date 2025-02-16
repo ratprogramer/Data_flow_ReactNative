@@ -7,4 +7,8 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 20,
   },
+  botonesContainer: {
+    width: "100%", // Asegúrate de que el contenedor ocupe todo el ancho
+    marginTop: 20, // Espacio entre el título y los botones
+  },
 });

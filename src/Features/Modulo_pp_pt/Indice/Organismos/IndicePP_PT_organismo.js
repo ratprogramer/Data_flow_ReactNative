@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import { BotonesIndice } from "../../../../Moleculas/BotonesIndice/BotonesIndice";
 import { TituloPagina } from "../../../../Moleculas/TituloPagina/TituloPagina";
 import { styles } from "./styles";
@@ -15,6 +15,4 @@ export const IndicePP_PT_organismo = () => {
       <BotonesIndice botones={botones} />
     </View>
   );
-}
-
-
+};

@@ -1,5 +1,11 @@
-import { SubIndicePP_organismo } from "../../Organismos/SubIndicePP_organismo/SubIndicePP_organismo";
+import { View } from "react-native-web";
+import { SubIndicePP_organismo } from "../../../Vista_pp/Organismos/SubIndicePP_organismo/SubIndicePP_organismo";
 
 export const SubIndicePP = () => {
-  return <SubIndicePP_organismo />;
+  console.log(SubIndicePP_organismo);
+  return (
+    <View>
+      <SubIndicePP_organismo />
+    </View>
+  );
 };
