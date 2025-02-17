@@ -1,13 +1,14 @@
 // import { useState, useEffect } from "react";
-import { View, Text, Alert } from "react-native";
-// import { useForm, Controller } from "react-hook-form";
+import { View, Text, Alert, Pressable } from "react-native";
+import { useForm, Controller } from "react-hook-form";
+// import { InputSub } from "../../../../../Atomos/InputSub/InputSub";
+
 // import { useNavigate } from "react-router-dom";
 // import { decodeToken } from "../../../../../helpers/decodeToken";
 // import { usePostFetch } from "../../../../../helpers/usePostFetch";
 // import { SelectGroup } from "../../../../../Moleculas/InputGroup/SelectGroup/SelectGroup";
 // import { TimeGroup } from "../../../../../Moleculas/InputGroup/TimeGroup/TimeGroup";
 // import { TxtGroup } from "../../../../../Moleculas/InputGroup/TxtGroup/TxtGroup";
-// import { InputSub } from "../../../../../Atomos/InputSub/InputSub";
 
 export const FormularioIngresoPP_organismo = () => {
   // const { control, handleSubmit, watch } = useForm({
@@ -75,26 +76,25 @@ export const FormularioIngresoPP_organismo = () => {
 
   return (
     <View style={{ padding: 20 }}>
-
       <Text>hello</Text>
 
-      {/* <Controller
-        control={control}
-        render={({ field: { onChange, value } }) => (
-          <SelectGroup
-            id={"nombre_pp"}
-            label={"Nombre del producto *"}
-            opciones={opcionesNombreProducto}
-            value={value}
-            onChange={onChange}
-            validaciones={validaciones}
-          />
-        )}
+      <Controller
+        // control={control}
+        // render={({ field: { onChange, value } }) => (
+        //   <SelectGroup
+        //     id={"nombre_pp"}
+        //     label={"Nombre del producto *"}
+        //     opciones={opcionesNombreProducto}
+        //     value={value}
+        //     onChange={onChange}
+        //     validaciones={validaciones}
+        //   />
+        // )}
         name="nombre_pp"
         rules={{ required: "Los campos con * son obligatorios" }}
       />
 
-      <Controller
+      {/* <Controller
         control={control}
         render={({ field: { onChange, value } }) => (
           <TimeGroup
@@ -206,9 +206,9 @@ export const FormularioIngresoPP_organismo = () => {
         )}
         name="observaciones"
       />
+      */}
 
-      <InputSub text={"Ingresar"} onPress={handleSubmit(onSubmit, onError)} /> */}
+      {/* <InputSub text={"Ingresar"} onPress={Alert.alert("hello")} /> */}
     </View>
   );
 };
-
