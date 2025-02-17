@@ -8,10 +8,10 @@ import { MenuPrincipal } from "./src/Features/Modulo_menus/Paginas/MenuPrincipal
 
 import { IndicePP_PT } from "./src/Features/Modulo_pp_pt/Indice/Paginas/IndicePP_PT";
 import { SubIndicePP } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/SubindicePP/SubIndicePP";
+import { FormularioRegistroPP_pagina } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/FormularioRegistroPP/FormularioRegistroPP";
 
 // import { MenuPrincipalAdmin } from "./src/Features/Modulo_usuarios/Administrador/Menu_princial_admin/Pagina/MenuPrincipalAdmin/MenuPrincipalAdmin";
 // import { Registro_Usuario_Pagina } from "./src/Features/Modulo_usuarios/Administrador/Vista_registro_usuario/Pagina/Registro_Usuario_Pagina";
-// import { FormularioRegistroPP_pagina } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/FormularioRegistroPP/FormularioRegistroPP";
 // import { FormularioResultadoPP } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/FormularioResultadoPP/FormularioResultadoPP";
 // import { Pp_Registrados } from "./src/Features/Modulo_pp_pt/Vista_pp/Paginas/Pp_Registrados/Pp_Registrados";
 // import { SubIndicePT } from "./src/Features/Modulo_pp_pt/Vista_pt/Paginas/SubindicePT/SubIndicePT";
@@ -41,14 +41,15 @@ export const App = () => {
       >
         <Stack.Screen name="InicioSesion" component={InicioSesion} />
         <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} />
-        <Stack.Screen name="IndicePP_PT" component={IndicePP_PT} />
 
+        <Stack.Screen name="IndicePP_PT" component={IndicePP_PT} />
         <Stack.Screen name="SubIndicePP" component={SubIndicePP} />
-        {/* <Stack.Screen
-            name="FormularioRegistroPP"
-            component={FormularioRegistroPP_pagina}
-          />
-          <Stack.Screen name="Pp_Registrados" component={Pp_Registrados} />
+        <Stack.Screen
+          name="FormularioRegistroPP"
+          component={FormularioRegistroPP_pagina}
+        />
+
+        {/* <Stack.Screen name="Pp_Registrados" component={Pp_Registrados} />
           <Stack.Screen
             name="FormularioResultadoPP"
             component={FormularioResultadoPP}

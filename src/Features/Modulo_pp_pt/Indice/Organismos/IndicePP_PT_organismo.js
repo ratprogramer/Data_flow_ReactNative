@@ -7,7 +7,7 @@ export const IndicePP_PT_organismo = () => {
   const isDesktop = width > 768;
 
   const botones = [
-    { path: "", text: "Producto en Proceso" },
+    { path: "SubIndicePP", text: "Producto en Proceso" },
     { path: "", text: "Producto Terminado" },
   ];
 
