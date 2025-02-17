@@ -2,8 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: "column", // En móviles, los botones están en columna
-    // alignItems: "center",
+    flexDirection: "column",
     gap: 10,
   },
   containerDesktop: {
@@ -13,8 +12,8 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "flex-start",
     alignContent: "flex-start",
-    gap: 40,
-    Width: "100%", // Ajuste para que solo entren 4 columnas (200px por botón + gap)
+    gap: 10,
+    Width: "100%",
     Height: "100%",
   },
 
@@ -32,13 +31,12 @@ export const styles = StyleSheet.create({
     elevation: 3,
   },
   btnMobile: {
-    width: "100%", // En móviles ocupa casi todo el ancho
+    width: "100%",
     height: 50,
   },
   btnDesktop: {
-    top: 150,
     width: "40%",
-    height: "30%",
+    height: "50%",
   },
   btnAtomoHover: {
     backgroundColor: "#005072",
@@ -50,6 +48,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   textDesktop: {
-    fontSize: 30,
+
+    fontSize: 24,
   },
 });

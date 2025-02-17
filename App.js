@@ -44,7 +44,6 @@ export const App = () => {
         <Stack.Screen name="IndicePP_PT" component={IndicePP_PT} />
 
         <Stack.Screen name="SubIndicePP" component={SubIndicePP} />
-        {/* <Stack.Screen name="SubIndicePP" component={SubIndicePP} /> */}
         {/* <Stack.Screen
             name="FormularioRegistroPP"
             component={FormularioRegistroPP_pagina}

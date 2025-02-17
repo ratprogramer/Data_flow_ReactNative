@@ -16,7 +16,6 @@ export const BotonesIndice = ({ botones }) => {
 
 const styles = StyleSheet.create({
   botonesIndiceContainer: {
-    fontSize: 18,
     // gap: 5,
     // alignItems: "center",
     // flexDirection: "column",
