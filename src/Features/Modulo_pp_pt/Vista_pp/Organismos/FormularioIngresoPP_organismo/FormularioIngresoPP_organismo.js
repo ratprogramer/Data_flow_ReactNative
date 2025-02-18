@@ -223,7 +223,6 @@ import { useNavigation } from "@react-navigation/native";
 import { SelectGroup } from "../../../../../Moleculas/InputGroup/SelectGroup/SelectGroup";
 import { TimeGroup } from "../../../../../Moleculas/InputGroup/TimeGroup/TimeGroup";
 
-
 export const FormularioIngresoPP_organismo = () => {
   const { control, handleSubmit, watch } = useForm({
     defaultValues: {
@@ -246,7 +245,7 @@ export const FormularioIngresoPP_organismo = () => {
     }
 
     Alert.alert("Éxito", "Formulario enviado correctamente");
-    navigation.navigate("MenuPrincipal"); // Simulación de navegación tras éxito
+    navigation.navigate("SubIndicePP"); // Simulación de navegación tras éxito
   };
 
   const onError = (errors) => {
@@ -269,7 +268,6 @@ export const FormularioIngresoPP_organismo = () => {
         flex: 1,
         justifyContent: "space-between",
         alignSelf: "stretch",
-        width: "100%",
       }}
     >
       <Controller

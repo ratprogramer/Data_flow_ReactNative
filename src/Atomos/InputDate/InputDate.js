@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { TextInput, View, StyleSheet } from "react-native";
 
-export function InputDate({ id, register, validaciones, defaultDate }) {
+export const InputDate = ({ id, register, validaciones, defaultDate }) => {
   const [selectedDate, setSelectedDate] = useState("");
 
   useEffect(() => {
     if (defaultDate) {
-      const today = new Date().toISOString().split("T")[0]; // <= Esta variable devuelve la fecha en el formato "Año-Mes-Día"
+      const today = new Date().toISOString().split("T")[0];
       setSelectedDate(today);
-      register(id, validaciones).onChange({ target: { value: today } });
+      if (register) {
+        // Asegurar que register no es undefined antes de usarlo
+        register(id, validaciones)?.onChange({ target: { value: today } });
+      }
     }
   }, [defaultDate]);
 
@@ -19,14 +22,17 @@ export function InputDate({ id, register, validaciones, defaultDate }) {
         value={selectedDate}
         onChangeText={(text) => {
           setSelectedDate(text);
-          register(id, validaciones).onChange({ target: { value: text } });
+          if (register) {
+            // Evita errores si register no está definido
+            register(id, validaciones)?.onChange({ target: { value: text } });
+          }
         }}
         placeholder="YYYY-MM-DD"
         keyboardType="numeric"
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

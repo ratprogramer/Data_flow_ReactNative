@@ -8,17 +8,17 @@ export const SelectGroup = ({
   opciones,
   register,
   onChange,
-  // validations,
+  validations,
 }) => {
   return (
     <View>
-      <LabelRN>{label}</LabelRN>
+      <LabelRN id={id} text={label}  />
       <InputLst
         id={id}
         opciones={opciones}
         register={register}
         onChange={onChange}
-        // validations={validations}
+        validations={validations}
       />
     </View>
   );
