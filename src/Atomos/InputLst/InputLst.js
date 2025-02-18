@@ -1,5 +1,5 @@
-import { View, Picker } from "react-native";
-import { styles } from "./styles";
+import { View, StyleSheet } from "react-native";
+import { Picker } from "@react-native-picker/picker";
 
 export const InputLst = ({
   id,
@@ -11,7 +11,7 @@ export const InputLst = ({
   return (
     <View style={styles.container}>
       <Picker
-        selectedValue={register(id)?.value || ""}
+        selectedValue={register?.(id)?.value || ""}
         style={styles.picker}
         onValueChange={(itemValue) => {
           onChange({ target: { value: itemValue } });
@@ -31,4 +31,23 @@ export const InputLst = ({
       </Picker>
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    marginVertical: 10,
+    borderWidth: 1,
+    borderColor: "#000",
+    borderRadius: 7,
+    overflow: "hidden",
+  },
+  picker: {
+    backgroundColor: "#66cbed",
+    color: "#fff",
+    width: "100%",
+    fontSize: 18,
+    height: 48, // <= Esto es el equivalente a 2.6rem en CSS
+    padding: 4,
+    paddingLeft: 7,
+  },
+});
